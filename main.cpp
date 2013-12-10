@@ -4,13 +4,20 @@ using namespace std;
 
 #define N 8
 #define M 4
-
+int joseph(int n,int m)
+{
+	if(n==1)
+		return 0;
+	else
+		return (joseph(n-1,m)+m)%n;
+}
 void main()
 {
 	int a[N];
 	int n=N,k=N;
 	int i,p,num=0;
 	
+	cout<<joseph(8,4)<<endl;
 	for(i=0;i<N;i++)
 		a[i]=1;
     p=0;
@@ -31,3 +38,4 @@ void main()
 	 if(a[i]) cout<<i<<endl;
 	
 }
+
